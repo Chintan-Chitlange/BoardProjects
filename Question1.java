@@ -7,14 +7,15 @@ class Question1
       Scanner in =new Scanner(System.in);
       System.out.println("Enter the number of rows of floyd's triangle you want");
       n = in.nextInt();
-      for ( c = 1 ; c <= n ; c++ )
+      for (c = 1 ; c <= n ; ++c)
       {
-         for ( d = 1 ; d <= c ; d++ )
+         for ( d = 1 ; d <= c ;++d )
            {
               System.out.print(num+" ");
               num++;
            }
          System.out.println();
+         num= 1;
       }
    }
 }
