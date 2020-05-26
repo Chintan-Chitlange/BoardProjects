@@ -1,6 +1,6 @@
 import java.util.Scanner;
 /**
-Question.A class, namely Student, has three data members viz. Name. Roll No. and Marks of five subjects.
+Question7.A class, namely Student, has three data members viz. Name. Roll No. and Marks of five subjects.
 The stream is assigned which is based on the following criteria:                                                                                       
 Average Marks Stream
 90% or above         Science with Computers
