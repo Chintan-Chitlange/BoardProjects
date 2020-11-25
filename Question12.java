@@ -1,32 +1,36 @@
 import java.util.Scanner;
-import java.util.*;
 public class Question12
 {
     void Start()
     {
         Scanner sc= new Scanner(System.in);
-        String arr[]=new String[5];
-        System.out.println("Enter 20 names");
-        for (int i=0;i<5;i++)
+        char arr[]=new char[20];
+        System.out.println("Enter 20 characters");
+        int num=arr.length;
+        int temp=0;
+        for (int i=0;i<20;i++)
         {
-            arr[i]=sc.nextLine();
-        }
-        int len=arr.length;
-        String temp;
-        for (int i=0;i<len-1;i++)
+            arr[i]=sc.next().charAt(0);
+        } 
+        for (int i=0;i<20;i++)
         {
-            for (int j=0;j<(len-i-1);j++)
+            arr[i]= Character.toLowerCase(arr[i]);
+        } 
+        for (int i = 0; i < ( num - 1 ); i++)
+        {
+            for (int j = 1; j < (num - i) ; j++)
             {
-                if (arr[j].compareTo(arr[j+1])>0)
+                if (arr[j-1] > arr[j]) 
                 {
-                    temp=arr[j];
-                    arr[j]=arr[j+1];
-                    arr[j+1]=temp;
+                    //Swap Elements
+                    temp = (int)arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = (char)temp;
                 }
             }
         }
         System.out.println("The sorted names are :");
-        for (int i=0; i<len;i++)
+        for (int i=0; i<num;i++)
         {
             System.out.println(arr[i]);
         }
