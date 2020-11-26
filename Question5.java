@@ -8,7 +8,7 @@ public class Question5
       Scanner sc =new Scanner(System.in);
       System.out.println("Enter the number of rows and type of triangle you want");
       n=sc.nextInt();
-      System.out.println("Enter \'A\' for alphabetical triangle");
+      System.out.println("Enter \'5\' for triangle of 5 to n terms");
       System.out.println("Enter\'1\' for numeric triangle");
       ch= sc.next().charAt(0);  
         if (ch=='1')
@@ -24,21 +24,17 @@ public class Question5
          System.out.println();
         }
      }
-        else if(ch=='A')
+        else if(ch=='5')
      {
-        num = 97;
-        int Final= num +n;
-        for (i = num; i <=Final; i++)  
-        {     
-          for (j = 1; j <= n; j++)  
-          { 
-              System.out.print((char)num + " "); 
-              num++;
-          } 
-          System.out.print("\n");
-          num=97;
-          n--;
-        } 
+           int temp=n;
+        for(int i=1;i<=n;i++)
+        {
+           for (int j=temp;j>0;j--)
+           {
+              System.out.print("5");
+           }
+           temp--;
+        }
      } 
       else
      {
