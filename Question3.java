@@ -5,7 +5,7 @@ public class Question3
         int i;
         for(i=1;i<=20;i++)
         {
-            double s=Math.floor(Math.random()*201);
+            double s=Math.floor(Math.random()*101);
             System.out.println(s);
         }
     }
